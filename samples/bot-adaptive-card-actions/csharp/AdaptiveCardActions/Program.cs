@@ -1,7 +1,12 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Bot.Builder;
+using Microsoft.Bot.Builder.Integration.AspNet.Core;
+using Microsoft.Bot.Core.Compat;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -18,27 +23,34 @@ namespace Microsoft.BotBuilderSamples
         /// <param name="args">The command-line arguments.</param>
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var builder = WebApplication.CreateBuilder(args);
+
+            // Configure logging to include debug and console outputs
+            builder.Logging.AddDebug();
+            builder.Logging.AddConsole();
+
+            // Configure services (moved from Startup.ConfigureServices)
+            builder.Services.AddCompatAdapter();
+            builder.Services.AddHttpClient().AddControllers().AddNewtonsoftJson();
+            builder.Services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();
+            builder.Services.AddTransient<IBot, AdaptiveCardActionsBot>();
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline (moved from Startup.Configure)
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+            app.UseRouting();
+            app.UseAuthorization();
+
+            app.MapControllers();
+
+            app.Run();
         }
-
-        /// <summary>
-        /// Creates and configures a host builder.
-        /// </summary>
-        /// <param name="args">The command-line arguments.</param>
-        /// <returns>An initialized <see cref="IHostBuilder"/> instance.</returns>
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    // Configure logging to include debug and console outputs
-                    webBuilder.ConfigureLogging(logging =>
-                    {
-                        logging.AddDebug();
-                        logging.AddConsole();
-                    });
-
-                    // Specify the startup class to use
-                    webBuilder.UseStartup<Startup>();
-                });
     }
 }
