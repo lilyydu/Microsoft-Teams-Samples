@@ -22,10 +22,10 @@ namespace Microsoft.BotBuilderSamples
         /// <param name="services">The collection of service descriptors.</param>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCompatAdapter();
+
             // Add HTTP client and controllers with NewtonsoftJson support
             services.AddHttpClient().AddControllers().AddNewtonsoftJson();
-
-            services.AddCompatAdapter();
 
             // Create the Bot Framework Adapter with error handling enabled.
             services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();

@@ -9,7 +9,7 @@
     <PackageReference Include="AdaptiveCards.Rendering.Html" Version="2.7.3" />
     <PackageReference Include="AdaptiveCards.Templating" Version="2.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.22" />
-    <PackageReference Include="Microsoft.Bot.Core.Compat" Version="0.0.1-alpha-0034-g051a8ba110" />
+    <PackageReference Include="Microsoft.Bot.Core.Compat" Version="0.0.1-alpha-0054-gebe0d9bbe0" />
   </ItemGroup>
 
   <ItemGroup>
