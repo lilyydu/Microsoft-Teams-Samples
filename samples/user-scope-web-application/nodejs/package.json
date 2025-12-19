@@ -22,7 +22,7 @@
     "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
-    "esbuild": "^0.18.1",
+    "esbuild": "^0.25.0",
     "express": "^4.17.1",
     "lodash": "^4.17.21",
     "parallel-each": "^1.1.7",
