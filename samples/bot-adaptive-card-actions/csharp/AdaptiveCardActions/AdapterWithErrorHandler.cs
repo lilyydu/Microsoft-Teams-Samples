@@ -2,20 +2,18 @@
 // Licensed under the MIT License.
 
 using System;
-using System.Net.Http;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Integration.AspNet.Core;
 using Microsoft.Bot.Builder.TraceExtensions;
 using Microsoft.Bot.Core;
 using Microsoft.Bot.Core.Compat;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace Microsoft.BotBuilderSamples
 {
     public class AdapterWithErrorHandler : CompatAdapter
     {
-        public AdapterWithErrorHandler(BotApplication app, CompatBotAdapter botAdapter, IConfiguration configuration, IHttpClientFactory httpClientFactory, ILogger<IBotFrameworkHttpAdapter> logger, ConversationState conversationState = default)
+        public AdapterWithErrorHandler(BotApplication app, CompatBotAdapter botAdapter, ILogger<IBotFrameworkHttpAdapter> logger, ConversationState conversationState = default)
             : base(app, botAdapter)
         {
             OnTurnError = async (turnContext, exception) =>
