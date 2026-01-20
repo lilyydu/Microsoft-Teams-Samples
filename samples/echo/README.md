@@ -36,7 +36,7 @@ Other platforms (like MacOS, via npm)
 npm install -g @microsoft/m365agentsplayground
 ```
 
-Once the tool is installed, you can run the tool from your terminal with the command `agentsplaygroud`, and it will try to connect to `localhost:3978` where your bot is running.
+Once the tool is installed, you can run it from your terminal with the command `agentsplayground`, and it will try to connect to `localhost:3978` where your bot is running.
 
 ## Run in the Teams Client
 
@@ -48,7 +48,7 @@ To run these samples in the Teams Client, you need to provision your app in a M3
 
 ### Configure DevTunnels
 
-Create a persistent tunnel for the port 3978 with anonymoys access
+Create a persistent tunnel for the port 3978 with anonymous access
 
 ```
 devtunnel create -a my-tunnel  
@@ -124,7 +124,7 @@ Or to use Env Vars from the profile defined in `launchSettings.json` (using the 
 
 To obtain the TenantId, ClientId and SecretId you can use the Azure CLI with:
 
-> Note. If you dont have access to an Azure Subscription you can still use the Azure CLI, make sure you login with `az login --allow-no-subscription` 
+> Note. If you don't have access to an Azure Subscription you can still use the Azure CLI, make sure you login with `az login --allow-no-subscription` 
 
 ```
 az ad app credential reset --id $appId
