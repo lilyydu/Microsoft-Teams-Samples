@@ -5,8 +5,6 @@ This sample demonstrates a simple Echo Bot for Microsoft Teams using .NET and AS
 ## Prerequisites
 
 - [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
-- A Microsoft 365 account with access to Microsoft Teams
-- [DevTunnels](https://learn.microsoft.com/azure/developer/dev-tunnels/overview) for tunneling
 
 ## Run the sample
 

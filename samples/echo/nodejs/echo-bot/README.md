@@ -6,8 +6,6 @@ This sample demonstrates a simple Echo Bot for Microsoft Teams using Node.js and
 
 - [Node.js](https://nodejs.org/) (LTS version recommended)
 - npm or yarn
-- A Microsoft 365 account with access to Microsoft Teams
-- [DevTunnels](https://learn.microsoft.com/azure/developer/dev-tunnels/overview) for tunneling
 
 ## Run the sample
 
