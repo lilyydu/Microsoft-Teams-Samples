@@ -5,7 +5,7 @@ This sample demonstrates a simple Echo Bot for Microsoft Teams using Python.
 ## Prerequisites
 
 - [Python 3.12+](https://www.python.org/downloads/)
-- [uv](https://docs.astral.sh/uv/) (recommended) or pip
+- [uv](https://docs.astral.sh/uv/)
 
 ## Run the sample
 
