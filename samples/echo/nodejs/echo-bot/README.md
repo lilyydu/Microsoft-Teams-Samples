@@ -5,7 +5,6 @@ This sample demonstrates a simple Echo Bot for Microsoft Teams using Node.js and
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (LTS version recommended)
-- npm or yarn
 
 ## Run the sample
 

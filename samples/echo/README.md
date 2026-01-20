@@ -14,9 +14,9 @@ This sample demonstrates a simple Echo Bot for Microsoft Teams using the Teams S
 
 You can run these samples locally using the `agentsplayground` tool, without provisioning the Teams App, or you can run in the Teams Client after you have provisioned the Teams Application and configured the application with your local DevTunnels URL.
 
-## Run in the `agentplayground`
+## Run in the `agentsplayground`
 
-Install the tool agentplayground for your platform
+Install the tool agentsplayground for your platform
 
 Windows
 
@@ -40,7 +40,7 @@ Once the tool is installed, you can run the tool from your terminal with the com
 
 ## Run in the Teams Client
 
-To run these samples in the Teams Client you need to provision your app in a M365 Tenant, and configure the app to your DevTunnels URL.
+To run these samples in the Teams Client, you need to provision your app in a M365 Tenant, and configure the app to your DevTunnels URL.
 
 1. Install the tool DevTunnels https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/get-started
 2. Get Access to a M365 Developer Tenant https://learn.microsoft.com/en-us/office/developer-program/microsoft-365-developer-program-get-started
@@ -51,7 +51,7 @@ To run these samples in the Teams Client you need to provision your app in a M36
 Create a persistent tunnel for the port 3978 with anonymoys access
 
 ```
-devtunnel create my-tunnel -a 
+devtunnel create -a my-tunnel  
 devtunnel port create -p 3978  my-tunnel 
 devtunnel host  my-tunnel
 ```
@@ -64,11 +64,11 @@ Navigate to the Teams Developer Portal http://dev.teams.microsoft.com
 
 #### Create a new Bot resource
 
-1. Navigate to `Tools->Bot management`, and add a `New bot`.
+1. Navigate to `Tools->Bot management`, and add a `New bot`
 1. In Configure, paste the Endpoint address from devtunnels and append `/api/messages`
-1. In Client secrets create a new secret and save it for later
+1. In Client secrets, create a new secret and save it for later
 
-> Note. If you have access to an Azure Subscription in the same Tenant, you can also create the Azure Bot resource.
+> Note. If you have access to an Azure Subscription in the same Tenant, you can also create the Azure Bot resource ([learn more](https://learn.microsoft.com/en-us/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&tabs=singletenant)).
 
 #### Create a new Teams App
 
@@ -89,7 +89,7 @@ CLIENT_ID=
 CLIENT_SECRET=
 ```
 
-For dotnet you need to add these values to `appsettings.json` or `launchSettings.json` using the next sytax.
+For dotnet you need to add these values to `appsettings.json` or `launchSettings.json` using the next syntax.
 
 appSettings.json
 
@@ -129,11 +129,6 @@ To obtain the TenantId, ClientId and SecretId you can use the Azure CLI with:
 ```
 az ad app credential reset --id $appId
 ```
-
-
-
-
-
 
 ## Further Reading
 

@@ -1,5 +1,6 @@
 {
   "main": "index.ts",
+  "private": true,
   "type": "module",
   "scripts": {
     "start" : "tsx --env-file-if-exists .env index.ts"
