@@ -1,0 +1,13 @@
+{
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start" : "tsx --env-file-if-exists .env index.ts"
+  },
+  "dependencies": {
+    "@microsoft/teams.apps": "^2.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
+  }
+}
