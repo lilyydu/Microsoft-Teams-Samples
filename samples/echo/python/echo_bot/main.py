@@ -7,8 +7,9 @@ import asyncio
 
 from microsoft_teams.api import MessageActivity
 from microsoft_teams.apps import ActivityContext, App
+from microsoft_teams.devtools import DevToolsPlugin
 
-app = App()
+app = App(plugins=[DevToolsPlugin()])
 
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
