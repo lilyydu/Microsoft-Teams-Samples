@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11612.150 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotAiMessages", "BotAiMessages.csproj", "{F0F6C465-F060-16EA-6F7C-3EF65C5E756C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0F6C465-F060-16EA-6F7C-3EF65C5E756C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0F6C465-F060-16EA-6F7C-3EF65C5E756C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0F6C465-F060-16EA-6F7C-3EF65C5E756C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0F6C465-F060-16EA-6F7C-3EF65C5E756C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C27D02E1-D99B-4F7F-B48D-D4E8ADDA04F7}
+	EndGlobalSection
+EndGlobal
